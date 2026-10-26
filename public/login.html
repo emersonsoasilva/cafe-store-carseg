@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Entrar — Café Store</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">☕ Café Store</div>
+  <nav id="nav-actions"></nav>
+</header>
+
+<main>
+  <div class="card">
+    <h1>Entrar</h1>
+    <div id="msg" class="message" hidden></div>
+    <form id="login-form">
+      <label for="email">E-mail</label>
+      <input id="email" type="email" required maxlength="200" autocomplete="username" />
+      <label for="password">Senha</label>
+      <input id="password" type="password" required maxlength="128" autocomplete="current-password" />
+      <button type="submit">Entrar</button>
+    </form>
+    <p class="hint">
+      <a href="/forgot-password.html">Esqueci minha senha</a> ·
+      Não tem conta? <a href="/register.html">Cadastre-se</a>
+    </p>
+    <p class="hint">Contas fictícias para teste: <code>maria.silva@exemplo.test</code> / <code>CafeComLeite@2024</code></p>
+  </div>
+</main>
+
+<script src="/js/api.js"></script>
+<script src="/js/login.js"></script>
+</body>
+</html>

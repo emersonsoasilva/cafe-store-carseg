@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Finalizar compra — Café Store</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">☕ Café Store</div>
+  <nav id="nav-actions"></nav>
+</header>
+
+<main>
+  <div class="card">
+    <h1>Finalizar compra</h1>
+    <div id="msg" class="message" hidden></div>
+    <div id="summary"></div>
+    <h2>Endereço de entrega</h2>
+    <form id="checkout-form">
+      <label for="street">Rua e número</label>
+      <input id="street" required maxlength="200" />
+      <div class="row">
+        <div>
+          <label for="city">Cidade</label>
+          <input id="city" required maxlength="100" />
+        </div>
+        <div>
+          <label for="state">UF</label>
+          <input id="state" required maxlength="2" style="text-transform:uppercase" />
+        </div>
+        <div>
+          <label for="zip">CEP</label>
+          <input id="zip" required maxlength="12" />
+        </div>
+      </div>
+      <button type="submit">Confirmar pedido</button>
+    </form>
+  </div>
+</main>
+
+<script src="/js/api.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/checkout.js"></script>
+</body>
+</html>

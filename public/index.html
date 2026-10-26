@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Café Store — Grãos selecionados</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">☕ Café Store</div>
+  <nav id="nav-actions"></nav>
+</header>
+
+<main>
+  <div class="card">
+    <h1>Nossos cafés</h1>
+    <p class="hint">Grãos torrados sob encomenda. Escolha, adicione ao carrinho e finalize sua compra.</p>
+  </div>
+
+  <div id="msg" class="message" hidden></div>
+
+  <div id="products" class="grid">Carregando produtos...</div>
+
+  <div class="card" id="cart-card">
+    <h2>Carrinho</h2>
+    <div id="cart-items"><p class="hint">Seu carrinho está vazio.</p></div>
+    <p><strong>Total: <span id="cart-total">R$ 0,00</span></strong></p>
+    <button id="checkout-btn">Finalizar compra</button>
+  </div>
+</main>
+
+<script src="/js/api.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/index.js"></script>
+</body>
+</html>

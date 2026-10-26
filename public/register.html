@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cadastrar — Café Store</title>
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">☕ Café Store</div>
+  <nav id="nav-actions"></nav>
+</header>
+
+<main>
+  <div class="card">
+    <h1>Criar conta</h1>
+    <div id="msg" class="message" hidden></div>
+    <form id="register-form">
+      <label for="name">Nome completo</label>
+      <input id="name" required maxlength="120" />
+      <label for="email">E-mail</label>
+      <input id="email" type="email" required maxlength="200" autocomplete="username" />
+      <label for="cpf">CPF (apenas números)</label>
+      <input id="cpf" required maxlength="14" placeholder="000.000.000-00" />
+      <label for="phone">Telefone</label>
+      <input id="phone" maxlength="30" />
+      <label for="password">Senha</label>
+      <input id="password" type="password" required minlength="10" maxlength="128" autocomplete="new-password" />
+      <p class="hint">
+        Mínimo 10 caracteres, com letra maiúscula, minúscula e número.
+        Não pode conter: "ç"/"Ç", aspas simples ('), espaços, ou sequência
+        numérica (ex.: 123, 4321).
+      </p>
+      <label for="street">Rua e número</label>
+      <input id="street" required maxlength="200" />
+      <div class="row">
+        <div>
+          <label for="city">Cidade</label>
+          <input id="city" required maxlength="100" />
+        </div>
+        <div>
+          <label for="state">UF</label>
+          <input id="state" required maxlength="2" style="text-transform:uppercase" />
+        </div>
+        <div>
+          <label for="zip">CEP</label>
+          <input id="zip" required maxlength="12" />
+        </div>
+      </div>
+      <button type="submit">Cadastrar</button>
+    </form>
+    <p class="hint">Já tem conta? <a href="/login.html">Entrar</a></p>
+  </div>
+</main>
+
+<script src="/js/api.js"></script>
+<script src="/js/register.js"></script>
+</body>
+</html>

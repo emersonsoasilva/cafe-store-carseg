@@ -1,0 +1,26 @@
+# Sobe um PostgreSQL local para desenvolvimento.
+# Uso: docker compose up -d
+# Depois, no .env: DATABASE_URL=postgres://cafestore_app:troque_esta_senha@localhost:5432/cafestore
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: cafestore-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: cafestore
+      POSTGRES_USER: cafestore_app
+      POSTGRES_PASSWORD: troque_esta_senha
+    ports:
+      - "5432:5432"
+    volumes:
+      - cafestore_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U cafestore_app -d cafestore"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  cafestore_pgdata:
