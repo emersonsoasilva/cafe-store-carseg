@@ -12,6 +12,8 @@ const authRoutes = require('./src/routes/authRoutes');
 const productRoutes = require('./src/routes/productRoutes');
 const orderRoutes = require('./src/routes/orderRoutes');
 
+const simulatorRoutes = require('./src/routes/simulatorRoutes');
+
 const app = express();
 
 // Necessário para que req.ip / express-rate-limit funcionem corretamente
@@ -58,6 +60,7 @@ app.use('/api', generalApiLimiter);
 app.use('/api/auth', authRoutes);
 app.use('/api', productRoutes);
 app.use('/api', orderRoutes);
+app.use('/api', simulatorRoutes);
 
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 
