@@ -1,7 +1,7 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
-const { v4: uuidv4 } = require('uuid');
+const { randomUUID: uuidv4 } = require('crypto');
 const { pool, withTransaction } = require('../config/db');
 const env = require('../config/env');
 const { encryptField, generateOpaqueToken, hashToken } = require('../utils/crypto');
