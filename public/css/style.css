@@ -127,3 +127,23 @@ input, select {
 
 table { width: 100%; border-collapse: collapse; }
 th, td { text-align: left; padding: 0.5rem; border-bottom: 1px solid #eee; font-size: 0.9rem; }
+
+
+/* Simulador automático */
+.simulator-heading, .simulator-controls { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.simulator-heading h2 { margin-bottom: .25rem; }
+.simulator-controls { margin: 1rem 0; }
+.simulator-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: .75rem; margin: 1.25rem 0; }
+.simulator-stats > div { background: #f7f4ef; border-radius: 8px; padding: 1rem; display: flex; flex-direction: column; gap: .25rem; }
+.simulator-stats strong { font-size: 1.6rem; color: var(--accent); }
+.simulator-stats span { font-size: .82rem; color: #666; }
+.sim-history { max-height: 300px; overflow-y: auto; }
+.sim-history-item { display: grid; grid-template-columns: 145px 85px 1fr; gap: .75rem; padding: .65rem 0; border-bottom: 1px solid #eee; font-size: .86rem; }
+.sim-history-time { color: #777; }
+.sim-history-type { font-weight: 700; }
+.sim-error { color: var(--danger); }
+.badge.success { background: #d4edda; color: #155724; }
+button:disabled { opacity: .5; cursor: not-allowed; }
+@media (max-width: 600px) {
+  .sim-history-item { grid-template-columns: 1fr; gap: .2rem; }
+}
