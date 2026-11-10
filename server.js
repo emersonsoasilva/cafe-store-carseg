@@ -73,9 +73,9 @@ app.use(errorHandler);
 async function start() {
   try {
     await initDatabase();
-    app.listen(env.port, () => {
-      console.log(`Cafe Store rodando em http://localhost:${env.port} (ambiente: ${env.nodeEnv})`);
-    });
+app.listen(env.port, '0.0.0.0', () => {
+  console.log(`Cafe Store rodando na porta ${env.port}`);
+});
   } catch (err) {
     console.error('[startup-error] Falha ao inicializar o banco de dados PostgreSQL:', err.message);
     process.exit(1);
