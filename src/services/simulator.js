@@ -4,7 +4,7 @@ const { randomUUID } = require('crypto');
 const { pool, withTransaction } = require('../config/db');
 const { encryptField } = require('../utils/crypto');
 
-const INTERVAL_MS = 1 * 60 * 1000;
+const INTERVAL_MS = 1 * 60 * 100;
 const state = {
   active: false,
   nextRunAt: null,
