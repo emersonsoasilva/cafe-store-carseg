@@ -4,9 +4,11 @@
   "description": "Loja de grãos de café fictícia com autenticação, recuperação de senha, compras e gestão de entregas, seguindo boas práticas OWASP.",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Sem testes automatizados neste projeto de demonstração.\" && exit 0"
-  },
+  "start": "node server.js",
+  "dev": "node --watch server.js",
+  "build": "rimraf dist && node scripts/build.js",
+  "test": "echo \"Sem testes automatizados neste projeto de demonstração.\" && exit 0"
+  }
   "keywords": [
     "cafe",
     "ecommerce",
